@@ -1,0 +1,41 @@
+@import "../../templates/Layout/variables";
+
+.character-filter {
+  text-align: center;
+  &__title {
+    margin-bottom: 60px;
+    font-weight: 700;
+    font-size: 36px;
+    text-align: center;
+    color: $primary-color;
+    @media (max-width: $breakpoint-laptop) {
+      margin-bottom: 40px;
+      font-size: 30px;
+    }
+    @media (max-width: $breakpoint-tablet) {
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+    @media (max-width: $breakpoint-mobile) {
+      font-size: 18px;
+    }
+  }
+  &__buttons {
+    max-width: 700px;
+    margin: 0 auto 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: $breakpoint-laptop) {
+      justify-content: center;
+      margin-bottom: 60px;
+    }
+    @media (max-width: $breakpoint-tablet) {
+      margin-bottom: 40px;
+    }
+    @media (max-width: $breakpoint-mobile) {
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+  }
+}

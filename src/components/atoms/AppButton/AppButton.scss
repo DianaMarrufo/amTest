@@ -1,0 +1,32 @@
+@import "../../templates/Layout/variables";
+
+.app-button {
+  cursor: pointer;
+  margin: 0 4px 2px;
+  width: 288px;
+  height: 68px;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  color: #ffffff;
+  border-radius: 4px;
+  background-color: $normal-color;
+  border: 4px $secondary-color solid;
+  &:hover {
+    background-color: $hover-color;
+  }
+  &--active {
+    background-color: $secondary-color;
+  }
+  @media (max-width: $breakpoint-laptop) {
+    width: 260px;
+    height: 60px;
+  }
+  @media (max-width: $breakpoint-mobile) {
+    width: 142px;
+    height: 40px;
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,144 @@
+@import "../../templates/Layout/variables";
+
+.character-card {
+  margin: 20px;
+  width: calc(50% - 42px);
+  max-width: 515px;
+  height: 265px;
+  display: flex;
+  background: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 16px;
+  overflow: hidden;
+  &__image {
+    width: 40%;
+    padding: 14px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &--Gryffindor {
+      background: $gryffindor-color;
+    }
+    &--Slytherin {
+      background: $slytherin-color;
+    }
+    &--Ravenclaw {
+      background: $ravenclaw-color;
+    }
+    &--Hufflepuff {
+      background: $hufflepuff-color;
+    }
+    img {
+      width: 168px;
+      max-width: 80%;
+      height: 168px;
+      border-radius: 50%;
+      @media (max-width: $breakpoint-laptop) {
+        width: 140px;
+        height: 140px;
+      }
+      @media (max-width: $breakpoint-tablet) {
+        width: 120px;
+        height: 120px;
+      }
+      @media (max-width: $breakpoint-mobile) {
+        width: 70px;
+        height: 70px;
+      }
+    }
+    @media (max-width: $breakpoint-laptop) {
+      width: 100%;
+    }
+  }
+  &__info {
+    width: calc(60% - 50px);
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    &-status {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 1.4;
+      text-align: left;
+      color: #999999;
+      display: flex;
+      justify-content: space-between;
+      svg {
+        margin-left: 10px;
+      }
+      > div {
+        display: flex;
+        @media (max-width: $breakpoint-tablet) {
+          display: block;
+        }
+      }
+      span {
+        margin: 0 4px;
+        @media (max-width: $breakpoint-tablet) {
+          display: none;
+        }
+      }
+      @media (max-width: $breakpoint-tablet) {
+        font-size: 11px;
+      }
+    }
+    &-title {
+      font-weight: 600;
+      font-size: 30px;
+      text-align: left;
+      color: #081F32;
+      @media (max-width: $breakpoint-laptop) {
+        text-align: center;
+      }
+      @media (max-width: $breakpoint-tablet) {
+        font-size: 24px;
+      }
+      @media (max-width: $breakpoint-mobile) {
+        font-size: 18px;
+      }
+    }
+    &-list {
+      margin: 0;
+      padding-left: 0;
+      list-style: none;
+      li {
+        font-weight: 400;
+        font-size: 14px;
+        color: #374A59;
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+        b {
+          font-weight: 600;
+        }
+      }
+      @media (max-width: $breakpoint-tablet) {
+        display: none;
+      }
+    }
+    @media (max-width: $breakpoint-laptop) {
+      width: calc(100% - 50px);
+      height: 180px;
+    }
+    @media (max-width: $breakpoint-tablet) {
+      flex-direction: column-reverse;
+      width: calc(100% - 40px);
+      height: 80px;
+      padding: 20px;
+    }
+    @media (max-width: $breakpoint-mobile) {
+      width: calc(100% - 20px);
+      height: 80px;
+      padding: 10px;
+    }
+  }
+  @media (max-width: $breakpoint-laptop) {
+    height: auto;
+    flex-direction: column;
+  }
+  @media (max-width: $breakpoint-mobile) {
+    margin: 6px;
+    width: calc(50% - 16px);
+  }
+}

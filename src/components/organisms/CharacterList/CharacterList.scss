@@ -1,0 +1,11 @@
+@import "../../templates/Layout/variables";
+
+.character-list {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}

@@ -1,10 +1,12 @@
 import React from 'react';
+import { Home } from './components/pages/Home';
+import { Layout } from './components/templates/Layout';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello Unicorn!</h1>
-    </div>
+    <Layout>
+      <Home />
+    </Layout>
   );
 }
 
