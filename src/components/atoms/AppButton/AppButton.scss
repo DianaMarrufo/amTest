@@ -5,12 +5,13 @@
   margin: 0 4px 2px;
   width: 288px;
   height: 68px;
+  font-family: $font-stack;
   font-weight: 600;
   font-size: 17px;
   line-height: 25px;
   text-align: center;
   letter-spacing: 0.2em;
-  color: #ffffff;
+  color: $primary-color;
   border-radius: 4px;
   background-color: $normal-color;
   border: 4px $secondary-color solid;

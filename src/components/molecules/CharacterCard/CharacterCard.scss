@@ -10,7 +10,7 @@
   border: 1px solid #000000;
   border-radius: 16px;
   overflow: hidden;
-  &__image {
+  &__bg {
     width: 40%;
     padding: 14px 0;
     display: flex;
@@ -28,11 +28,14 @@
     &--Hufflepuff {
       background: $hufflepuff-color;
     }
-    img {
+    &-image {
       width: 168px;
       max-width: 80%;
       height: 168px;
       border-radius: 50%;
+      background-position: center top;
+      background-size: cover;
+      background-repeat: no-repeat;
       @media (max-width: $breakpoint-laptop) {
         width: 140px;
         height: 140px;
@@ -64,20 +67,25 @@
       color: #999999;
       display: flex;
       justify-content: space-between;
-      svg {
-        margin-left: 10px;
-      }
-      > div {
+      ul {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
         display: flex;
         @media (max-width: $breakpoint-tablet) {
           display: block;
         }
-      }
-      span {
-        margin: 0 4px;
-        @media (max-width: $breakpoint-tablet) {
-          display: none;
+        > li {
+          &:nth-child(2){
+            margin: 0 4px;
+            @media (max-width: $breakpoint-tablet) {
+              display: none;
+            }
+          }
         }
+      }
+      svg {
+        margin-left: 10px;
       }
       @media (max-width: $breakpoint-tablet) {
         font-size: 11px;
@@ -87,7 +95,7 @@
       font-weight: 600;
       font-size: 30px;
       text-align: left;
-      color: #081F32;
+      color: #081f32;
       @media (max-width: $breakpoint-laptop) {
         text-align: center;
       }
@@ -105,7 +113,7 @@
       li {
         font-weight: 400;
         font-size: 14px;
-        color: #374A59;
+        color: #374a59;
         &:not(:last-child) {
           margin-bottom: 10px;
         }

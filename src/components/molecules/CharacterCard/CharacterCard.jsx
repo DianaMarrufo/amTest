@@ -1,20 +1,26 @@
-import React from "react"
-import { FavIcon } from "../../../assets/svg"
-import "./CharacterCard.scss"
+import React from "react";
+import { FavIcon } from "../../../assets/svg";
+import "./CharacterCard.scss";
 
 export const CharacterCard = () => {
   return (
     <div className="character-card">
-      <div className="character-card__image character-card__image--Gryffindor">
-        <img src="http://hp-api.herokuapp.com/images/harry.jpg" alt="harry" />
+      <div className="character-card__bg character-card__bg--Gryffindor">
+        <div
+          className="character-card__bg-image"
+          style={{
+            backgroundImage:
+              "url('http://hp-api.herokuapp.com/images/harry.jpg')",
+          }}
+        ></div>
       </div>
       <div className="character-card__info">
         <div className="character-card__info-status">
-          <div>
-            <div>VIVO</div>
-            <span>/</span> 
-            <div>ESTUDIANTE</div>
-          </div>
+          <ul>
+            <li>VIVO</li>
+            <li>/</li>
+            <li>ESTUDIANTE</li>
+          </ul>
           <FavIcon />
         </div>
         <div className="character-card__info-title">Harry Potter</div>
