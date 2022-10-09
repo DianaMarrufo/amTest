@@ -1,0 +1,38 @@
+@import "../../templates/Layout/variables";
+
+.home {
+  padding-top: 140px;
+  padding-bottom: 100px;
+  &__container {
+    width: 90%;
+    max-width: 1600px;
+    margin: 0 auto;
+    @media (max-width: $breakpoint-mobile) {
+      width: 95%;
+    }
+  }
+  &__logo {
+    margin-bottom: 30px;
+    text-align: center;
+    svg {
+      @media (max-width: $breakpoint-mobile) {
+        width: 124px;
+        height: 42px;
+      }
+    }
+    @media (max-width: $breakpoint-mobile) {
+      margin-bottom: 10px;
+    }
+  }
+  @media (max-width: $breakpoint-laptop) {
+    padding-top: 100px;
+    padding-bottom: 80px;
+  }
+  @media (max-width: $breakpoint-tablet) {
+    padding-top: 60px;
+  }
+  @media (max-width: $breakpoint-tablet) {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+}
