@@ -1,0 +1,22 @@
+@import '../../templates/Layout/variables';
+
+.app-radio {
+  label {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    color: #000000;
+    @media (max-width: $breakpoint-tablet) {
+      margin-top: 4px;
+    }
+  }
+  input { 
+    margin-left: 0;
+    margin-right: 14px;
+    @media (max-width: $breakpoint-tablet) {
+      margin-bottom: 4px;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@import "../../templates/Layout/variables";
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+  &__content {
+    position: relative;
+    max-width: 90%;
+    width: 720px;
+    height: 600px;
+    max-height: 90%;
+    background-color: $primary-color;
+    border-radius: 10px;
+    &-close {
+      cursor: pointer;
+      padding: 6px;
+      appearance: none;
+      border: none;
+      background: transparent;
+      position: absolute;
+      right: 30px;
+      top: 20px;
+      border-radius: 50%;
+      overflow: hidden;
+      z-index: 2;
+    }
+    &-body {
+      padding: 20px 30px;
+      height: 550px;
+      max-height: 90%;
+      color: $bg-color;
+      overflow: auto;
+      @media (max-width: $breakpoint-tablet) {
+        padding: 20px 20px;
+      }
+    }
+  }
+}
