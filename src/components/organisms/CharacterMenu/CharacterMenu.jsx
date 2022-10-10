@@ -2,9 +2,12 @@ import React, { useState } from "react";
 import "./CharacterMenu.scss";
 import { FavIcon, UserAddIcon } from "../../../assets/svg";
 import { FavItem } from "../../atoms/FavItem/FavItem";
+import { useSelector } from "react-redux";
 
 export const CharacterMenu = ({ showModal }) => {
   const [openList, setOpenList] = useState(false);
+
+  const { favorites } = useSelector((state) => state.character);
 
   const handleOpenFavList = (e) => {
     e.preventDefault();
@@ -38,10 +41,11 @@ export const CharacterMenu = ({ showModal }) => {
             : "character-menu__list"
         }
       >
-        <FavItem />
-        <FavItem />
-        <FavItem />
-        <FavItem />
+        {favorites?.length > 0 ? (
+          favorites.map((fav) => <FavItem key={"fav-item"+fav.name+fav.id} name={fav.name} image={fav.image} id={fav.id} />)
+        ) : (
+          <div className="character-menu__empty"> No hay elementos </div>
+        )}
       </div>
     </div>
   );

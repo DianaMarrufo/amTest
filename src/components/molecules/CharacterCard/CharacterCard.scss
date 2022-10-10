@@ -86,7 +86,9 @@
           }
         }
       }
-      svg {
+      button {
+        border: none;
+        background-color: transparent;
         margin-left: 10px;
       }
       @media (max-width: $breakpoint-tablet) {

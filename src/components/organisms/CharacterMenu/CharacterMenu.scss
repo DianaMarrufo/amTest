@@ -70,6 +70,10 @@
       transform: translate(0,0);
     }
   }
+  &__empty {
+    padding: 20px 10px;
+    text-align: center;
+  }
   @media (max-width: $breakpoint-tablet) {
     position: fixed;
     top: inherit;

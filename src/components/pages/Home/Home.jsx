@@ -34,7 +34,7 @@ export const Home = () => {
   return (
     <div className={styles.home}>
       <div className={styles.home__container}>
-        <CharacterMenu showModal={setOpenModal} />
+      <CharacterMenu showModal={setOpenModal} />
         <div className={styles.home__logo}>
           <AppLogo />
         </div>
