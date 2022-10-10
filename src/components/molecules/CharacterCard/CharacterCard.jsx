@@ -5,7 +5,7 @@ import "./CharacterCard.scss";
 export const CharacterCard = ({character}) => {
   return (
     <div className="character-card">
-      <div className={"character-card__bg character-card__bg--"+character.house}>
+      <div className={"character-card__bg character-card__bg--"+character?.house}>
         <div
           className="character-card__bg-image"
           style={{
@@ -32,7 +32,7 @@ export const CharacterCard = ({character}) => {
             <b>Género:</b> <span>{character.gender}</span> 
           </li>
           <li>
-            <b>Color de ojos;</b> <span>{character.eyeColour}</span> 
+            <b>Color de ojos:</b> <span>{character.eyeColour}</span> 
           </li>
           <li>
             <b>Color de pelo:</b> <span>{character.hairColour}</span> 

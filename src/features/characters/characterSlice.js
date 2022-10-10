@@ -78,7 +78,10 @@ export const characterSlice = createSlice({
       .addCase(createCharacter.fulfilled, (state, action) => {
         state.isLoading = false;
         state.isSuccess = true;
+        state.studentsActive = false;
+        state.staffActive = false;
         state.characters.push(action.payload);
+        state.charactersList = state.characters;
       })
       .addCase(createCharacter.rejected, (state, action) => {
         state.isLoading = false;

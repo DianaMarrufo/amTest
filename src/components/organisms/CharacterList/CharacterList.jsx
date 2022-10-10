@@ -9,7 +9,7 @@ export const CharacterList = () => {
   return (
     <div className="character-list">
       {charactersList.map((character) => (
-        <CharacterCard key={"character-card-"+character.name} character={character} />
+        <CharacterCard key={"character-card-"+character.name+character.id} character={character} />
       ))}
     </div>
   );
