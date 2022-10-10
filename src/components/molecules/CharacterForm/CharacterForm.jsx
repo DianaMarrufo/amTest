@@ -23,7 +23,7 @@ export const CharacterForm = () => {
           photo: "",
         }}
         onSubmit={(values) => {
-          console.log(values);
+          console.log("CharacterForm",values);
         }}
         validationSchema={Yup.object({
           firstName: Yup.string()
