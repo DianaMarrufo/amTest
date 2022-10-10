@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API_URL = 'http://localhost:3000/characters'
+const API_URL = 'https://slow-hill-lightyear.glitch.me/characters'
 
 // Create new character
 const createCharacter = async (characterData) => {
