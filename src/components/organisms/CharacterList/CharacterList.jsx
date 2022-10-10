@@ -1,19 +1,16 @@
-import React from 'react'
-import { CharacterCard } from '../../molecules/CharacterCard'
-import './CharacterList.scss'
+import React from "react";
+import { useSelector } from "react-redux";
+import { CharacterCard } from "../../molecules/CharacterCard";
+import "./CharacterList.scss";
 
 export const CharacterList = () => {
+  const { charactersList } = useSelector((state) => state.character);
+
   return (
-    <div className='character-list'>
-      <CharacterCard />
-      <CharacterCard />
-      <CharacterCard />
-      <CharacterCard />
-      <CharacterCard />
-      <CharacterCard />
-      <CharacterCard />
-      <CharacterCard />
-      <CharacterCard />
+    <div className="character-list">
+      {charactersList.map((character) => (
+        <CharacterCard key={"character-card-"+character.name} character={character} />
+      ))}
     </div>
-  )
-}
+  );
+};
