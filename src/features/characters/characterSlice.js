@@ -58,16 +58,26 @@ export const characterSlice = createSlice({
       state.staffActive = false;
       state.studentsActive = true;
     },
-    filterStaff: (state, action) => {
+    filterStaff: (state) => {
       state.charactersList = state.characters.filter((e) => e.hogwartsStaff);
       state.staffActive = true;
       state.studentsActive = false;
     },
     addFavorite: (state, action) => {
-      state.favorites += action.payload;
+      console.log("agregado")
+      state.favorites = [...state.favorites, action.payload];
+      state.charactersList = state.charactersList.map((e) =>
+        e.id === action.payload.id ? action.payload : e,
+      );
     },
-    deleteFavorite: (state, action) => {
-      state.favorites += action.payload;
+    removeFavorite: (state, action) => {
+      console.log("eliminado")
+      state.favorites = state.favorites.filter(
+        (e) => e.id !== action.payload.id,
+      );
+      state.charactersList = state.charactersList.map((e) =>
+        e.id === action.payload.id ? action.payload : e,
+      );
     },
   },
   extraReducers: (builder) => {
@@ -78,10 +88,8 @@ export const characterSlice = createSlice({
       .addCase(createCharacter.fulfilled, (state, action) => {
         state.isLoading = false;
         state.isSuccess = true;
-        state.studentsActive = false;
-        state.staffActive = false;
         state.characters.push(action.payload);
-        state.charactersList = state.characters;
+        state.charactersList.push(action.payload);
       })
       .addCase(createCharacter.rejected, (state, action) => {
         state.isLoading = false;
@@ -110,7 +118,24 @@ export const {
   filterStudents,
   filterStaff,
   addFavorite,
-  deleteFavorite,
+  removeFavorite,
 } = characterSlice.actions;
+
+export const selectCharacter = (state) => state.character;
+
+export const updateFavorite = (id) => (dispatch, getState) => {
+  const currentValue = selectCharacter(getState());
+  let updated = currentValue.charactersList.find((e) => e.id === id);
+  if (updated.fav) {
+    updated = { ...updated, fav: false };
+    dispatch(removeFavorite(updated));
+  } else {
+    if (currentValue.favorites.length < 5) {
+      updated = { ...updated, fav: true };
+      dispatch(addFavorite(updated));
+    }
+  }
+  console.log("LALA", updated);
+};
 
 export default characterSlice.reducer;

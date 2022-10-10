@@ -5,7 +5,7 @@ import "./CharacterList.scss";
 
 export const CharacterList = () => {
   const { charactersList } = useSelector((state) => state.character);
-
+  
   return (
     <div className="character-list">
       {charactersList.map((character) => (

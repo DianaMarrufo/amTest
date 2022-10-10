@@ -1,8 +1,10 @@
 import React from "react";
 import { TrashIcon } from "../../../assets/svg";
+import { updateFavorite } from "../../../features/characters/characterSlice";
 import "./FavItem.scss";
 
-export const FavItem = () => {
+export const FavItem = ({ name, image, id }) => {
+  
   return (
     <div className="fav-item">
       <ul className="fav-item__info">
@@ -10,12 +12,12 @@ export const FavItem = () => {
           className="fav-item__info-image"
           style={{
             backgroundImage:
-              "url('http://hp-api.herokuapp.com/images/luna.jpg')",
+              "url("+image+")",
           }}
         ></li>
-        <li className="fav-item__info-name">Luna Lovegood</li>
+        <li className="fav-item__info-name">{name}</li>
       </ul>
-      <button type="button" className="fav-item__button">
+      <button type="button" className="fav-item__button" onClick={updateFavorite(id)}>
         <TrashIcon />
       </button>
     </div>
