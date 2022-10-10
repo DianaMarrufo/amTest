@@ -5,7 +5,7 @@ import "./CharacterCard.scss";
 export const CharacterCard = ({character}) => {
   return (
     <div className="character-card">
-      <div className={"character-card__bg character-card__bg--"+character.house}>
+      <div className={"character-card__bg character-card__bg--"+character?.house}>
         <div
           className="character-card__bg-image"
           style={{
