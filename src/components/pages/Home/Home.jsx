@@ -42,7 +42,7 @@ export const Home = () => {
         <CharacterList/>
       </div>
       <AppModal show={openModal} showModal={setOpenModal}>
-        <CharacterForm />
+        <CharacterForm showModal={setOpenModal}/>
       </AppModal>
     </div>
   );

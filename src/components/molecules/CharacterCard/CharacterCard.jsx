@@ -32,7 +32,7 @@ export const CharacterCard = ({character}) => {
             <b>Género:</b> <span>{character.gender}</span> 
           </li>
           <li>
-            <b>Color de ojos;</b> <span>{character.eyeColour}</span> 
+            <b>Color de ojos:</b> <span>{character.eyeColour}</span> 
           </li>
           <li>
             <b>Color de pelo:</b> <span>{character.hairColour}</span> 

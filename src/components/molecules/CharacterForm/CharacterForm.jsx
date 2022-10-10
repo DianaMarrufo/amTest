@@ -10,8 +10,12 @@ import { createCharacter } from "../../../features/characters/characterSlice";
 import "./CharacterForm.scss";
 import { useDispatch } from "react-redux";
 
-export const CharacterForm = () => {
+export const CharacterForm = ({showModal}) => {
   const dispatch = useDispatch();
+
+  const handleCloseModal = () => {
+    showModal(false)
+  }
 
   return (
     <div className="character-form">
@@ -28,7 +32,7 @@ export const CharacterForm = () => {
         }}
         onSubmit={(values) => {
           values.image = 'http://hp-api.herokuapp.com/images/norris.JPG';
-          dispatch(createCharacter(values));
+          dispatch(createCharacter(values)) && handleCloseModal();
         }}
         validationSchema={Yup.object({
           name: Yup.string()
