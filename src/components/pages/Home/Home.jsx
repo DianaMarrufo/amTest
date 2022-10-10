@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { AppLogo } from '../../../assets/svg'
 import { AppModal } from '../../atoms/AppModal'
+import { CharacterForm } from '../../molecules/CharacterForm/CharacterForm'
 import { CharacterFilter } from '../../organisms/CharacterFilter'
 import { CharacterList } from '../../organisms/CharacterList'
 import { CharacterMenu } from '../../organisms/CharacterMenu'
@@ -20,7 +21,9 @@ export const Home = () => {
         <CharacterFilter />
         <CharacterList />
       </div>
-      <AppModal show={openModal} showModal={ setOpenModal } />
+      <AppModal show={openModal} showModal={ setOpenModal }>
+        <CharacterForm />
+      </AppModal>
     </div>
   )
 }

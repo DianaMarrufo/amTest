@@ -1,0 +1,53 @@
+@import '../../templates/Layout/variables';
+
+.character-form {
+  &__box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: $breakpoint-tablet) {
+      flex-direction: column;
+    }
+    &-one {
+      width: calc( 50% - 14px );
+      @media (max-width: $breakpoint-tablet) {
+        width: calc( 100% - 14px );
+      }
+    }
+    &-two {
+      width: calc( 50% - 14px );
+      @media (max-width: $breakpoint-tablet) {
+        width: calc( 100% - 14px );
+      }
+    }
+  }
+  &__title {
+    margin-bottom: 40px;
+    font-weight: 600;
+    font-size: 24px;
+    color: $bg_color;
+    @media (max-width: $breakpoint-tablet) {
+      font-size: 20px;
+    }
+  }
+  &__radio {
+    margin-bottom: 40px;
+    display: flex;
+    > div {
+      margin-right: 40px;
+      @media (max-width: $breakpoint-tablet) {
+        margin-right: 20px;
+      }
+    }
+    @media (max-width: $breakpoint-tablet) {
+      margin-bottom: 24px;
+    }
+  }
+  &__button {
+    margin-top: 60px;
+    text-align: center;
+    @media (max-width: $breakpoint-tablet) {
+      margin-top: 30px;
+    }
+  }
+}

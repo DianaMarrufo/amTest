@@ -2,7 +2,7 @@ import React from 'react'
 import { CloseIcon } from '../../../assets/svg'
 import './AppModal.scss'
 
-export const AppModal = ( { show, showModal } ) => {
+export const AppModal = ( { children, show, showModal } ) => {
 
   const handleCloseModal = () => {
     showModal(false)
@@ -15,7 +15,7 @@ export const AppModal = ( { show, showModal } ) => {
           <CloseIcon />
         </button>
         <div className='modal__content-body'>
-          Hello Modal!
+          { children }
         </div>
       </div>
     </div>
