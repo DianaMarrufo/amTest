@@ -15,5 +15,5 @@ Implementaciones: localStorage para los favoritos, typescript, pruebas unitarias
 # Descríbenos un pain point o bug con el que te hayas encontrado y como lo solucionaste
 -Nueva configuración del redux toolkit, Solucion: Leer la documentación de https://redux.js.org.
 -No saber deployar con json-server, Solucion: utilizar https://glitch.com/ para deployar la db.
--Poca disposición de tiempo, Solucion: Dejar lo dificil para el final y avanzar por ratitos. 
--Problemas en general para deployay.
+-Poca disposición de tiempo, Solucion: Dejar lo dificil para el final y avanzar por ratos. 
+-Problemas para deployar en general, solución: subir la carpeta de build directamente en lugar de usar la cuenta de github. 
